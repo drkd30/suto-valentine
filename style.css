@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Georgia', cursive;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffb6c1, #ffd1dc);
+    overflow: hidden;
+}
+
+/* Popup */
+
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.buttons button {
+    margin: 10px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#yesBtn {
+    background: #ff4d6d;
+    color: white;
+}
+
+#noBtn {
+    background: #aaa;
+}
+
+.hidden {
+    display: none;
+}
+
+#invalid {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Scene */
+
+.scene {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Decorations */
+
+.decor {
+    position: absolute;
+    font-size: 40px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.rose { top: 10%; left: 5%; }
+.sunflower { top: 40%; left: 5%; }
+.chocolate { bottom: 10%; left: 5%; }
+
+.decor.right { left: auto; right: 5%; }
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Message */
+
+.message {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    padding: 20px;
+    color: #8b0000;
+    animation: fade 1s;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Heart */
+
+#heartContainer {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart {
+    width: 300px;
+    height: 300px;
+    background: red;
+    position: relative;
+    transform: rotate(-45deg);
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    width: 300px;
+    height: 300px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart:before {
+    top: -150px;
+    left: 0;
+}
+
+.heart:after {
+    left: 150px;
+    top: 0;
+}
+
+.heart span {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 45%;
+    left: 25%;
+    transform: rotate(45deg);
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+}

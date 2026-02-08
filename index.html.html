@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Valentine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Popup -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <h2>Will you be my valentine?</h2>
+        <div class="buttons">
+            <button id="yesBtn">Yes</button>
+            <button id="noBtn">No</button>
+        </div>
+        <p id="invalid" class="hidden">Invalid response. Please try again.</p>
+    </div>
+</div>
+
+<!-- Main Romantic Scene -->
+<div id="scene" class="scene hidden">
+
+    <!-- Decorations -->
+    <div class="decor rose">🌹</div>
+    <div class="decor sunflower">🌻</div>
+    <div class="decor chocolate">🍫</div>
+
+    <div class="decor rose right">🌹</div>
+    <div class="decor sunflower right">🌻</div>
+    <div class="decor chocolate right">🍫</div>
+
+    <!-- Message Area -->
+    <div id="message" class="message"></div>
+
+    <!-- Heart -->
+    <div id="heartContainer" class="hidden">
+        <div class="heart">
+            <span>I love you</span>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
